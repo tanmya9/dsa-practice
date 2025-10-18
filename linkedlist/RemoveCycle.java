@@ -32,6 +32,7 @@ class RemoveCycle
     return false;
   }
 
+//Main function
   public static void removeCycle()
   {
     Node slow=head;
