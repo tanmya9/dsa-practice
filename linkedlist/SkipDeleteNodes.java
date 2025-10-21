@@ -41,7 +41,7 @@ class SkipDeleteNodes
 		System.out.println();
 	}
 
-  public void skipDelete(Node head, int m, int n)
+  public void skipDelete(int m, int n)
   {
     
     Node curr=head; //for traversing
@@ -79,7 +79,7 @@ class SkipDeleteNodes
 		list.addFirst(6);
 		list.print();
 		
-		list.skipDelete(head, 2, 2);
+		list.skipDelete(2, 2);
 		list.print();
   }
 }
