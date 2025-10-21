@@ -58,17 +58,14 @@ class SkipDeleteNodes
       }
       
       Node temp=curr.next; //for traversing from (m+1)th node
-      while(temp!=null)
-      {
-        //delete N nodes
-        for(int i=1; i<=n && temp!=null; i++)
+     //delete N nodes
+    	for(int i=1; i<=n && temp!=null; i++)
         {
           temp=temp.next;    
         }
         //linking Mth node from (N+1)th node
         curr.next=temp;
         curr=temp;
-      }
     }
   }
   public static void main(String args[])
