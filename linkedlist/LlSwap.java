@@ -16,7 +16,16 @@ class LlSwap
 
   public void swap(int x, int y)
   {
-    
+	if(x==y)
+	{
+		return;
+	}
+	Node prevX=null;
+	Node currX=head;
+	while(currX!=null && currX.data!=x)
+	{
+				
+	}
   }
 
   public void print()
