@@ -23,7 +23,66 @@ public Node OddEven(Node head)
 
   while(curr!=null)
   {
-    Node nextnode=prev.next;
-      
+     if(curr.data%2==0)
+     {
+        //removing curr node from original
+        if(prev!=null)
+        {
+          prev.next=curr.next;
+        }
+        else
+        {
+          head=curr.next;
+        }
+        //adding node to the result list
+        if(resStart==null)
+        {
+          resStart=curr;
+          resEnd=resStart;
+        }
+        else
+        {
+          resEnd.next=curr;
+          resEnd=resEnd.next;
+        }
+        curr=curr.next;
+      }
+      else
+      {
+        prev=curr;
+        curr=curr.next;
+      }
+    }
+        
+    if(resStart==null)
+    {
+      return head;
+    }
+    //append original to result list
+    resEnd.next=head;
+    return resStart;
   }
+  void printList()
+  {
+    Node temp = head;
+    while(temp != null)
+    {
+      System.out.print(temp.data+" ");
+      temp = temp.next;
+    }
+    System.out.println();
+  }
+  public static void main(String[] args)
+  {
+        Main list=new Main();
+        list.head=new Node(1);
+        list.head.next=new Node(2);
+        list.head.next.next=new Node(4);
+        list.head.next.next.next=new Node(7);
+        list.head.next.next.next.next=new Node(8);
+        list.printList();
+        
+        list.head = list.oddEven(list.head);
+        list.printList();
+    }
 }
