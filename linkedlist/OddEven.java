@@ -1,6 +1,6 @@
-class OddEven
+class Oddeven
 {
-  public static Node
+  public static class Node
   {
     int data;
     Node next;
@@ -25,7 +25,8 @@ public Node OddEven(Node head)
   {
      if(curr.data%2==0)
      {
-        //removing curr node from original
+       
+        //removing curr node from original list
         if(prev!=null)
         {
           prev.next=curr.next;
@@ -34,6 +35,7 @@ public Node OddEven(Node head)
         {
           head=curr.next;
         }
+       
         //adding node to the result list
         if(resStart==null)
         {
@@ -53,15 +55,19 @@ public Node OddEven(Node head)
         curr=curr.next;
       }
     }
-        
+
+    //if result list is still empty
     if(resStart==null)
     {
       return head;
     }
-    //append original to result list
+
+    //append original list to result list
     resEnd.next=head;
     return resStart;
   }
+
+  //function to print the linkedlist
   void printList()
   {
     Node temp = head;
