@@ -165,7 +165,7 @@ public class Using2stacks
 		static Stack<Integer> s1=new Stack<>();
 		static Stack<Integer> s2=new Stack<>();
 		
-		//checking is stack is empty
+		//checking if stack is empty
 		public static Boolean isEmpty()
 		{
 			return s1.isEmpty() && s2.isEmpty();		
@@ -177,6 +177,8 @@ public class Using2stacks
 			s1.push(data);
 		}
 		
+		//pushing all elements from s1 to s2 in one go
+		//then popping elements from s2 will reverse the order
 		public static int remove()
 		{
 				while(!s1.isEmpty()) {
