@@ -3,23 +3,23 @@ import java.util.*;
 public class Usingdeque {
 	
 	//Implementing Stack using Deque
-	static class Stack{
-		static Deque<Integer> deque=new LinkedList<>();
-		public void push(int data)
-		{
-			deque.addLast(data);
-		}
-		
-		public static int pop()
-		{
-			return deque.removeLast();
-		}
-		
-		public static int peek() //only to return the last element 
-		{
-			return deque.getLast();
-		}
-	}
+//	static class Stack{
+//		static Deque<Integer> deque=new LinkedList<>();
+//		public void push(int data)
+//		{
+//			deque.addLast(data);
+//		}
+//		
+//		public static int pop()
+//		{
+//			return deque.removeLast();
+//		}
+//		
+//		public static int peek() //only to return the last element 
+//		{
+//			return deque.getLast();
+//		}
+//	}
 //	public static void main(String args[])
 //	{
 //		Stack s=new Stack();
