@@ -97,7 +97,7 @@ public class ActivitySelection
 				maxAct++;
 				ans.add(i);
 				lastEnd=end[i];
-			}
+			}  
 		}
 		System.out.println("Max Activities "+maxAct);
 		
